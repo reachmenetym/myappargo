@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: nginx-application-argocd
+        app: nginx-application-argo
     spec:
       containers:
-      - name: nginx-application-argocd
+      - name: nginx-application-argo
         image: nginx
         resources:
           limits:
