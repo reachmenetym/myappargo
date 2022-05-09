@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx-application
+  type: LoadBalancer
+  externalIPs:
+    - "192.168.134.253"
+  ports:
+  - port: 8123
+    targetPort: 80
