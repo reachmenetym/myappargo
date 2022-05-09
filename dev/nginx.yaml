@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-application-argo
+spec:
+  selector:
+    matchLabels:
+      app: nginx-application-argo
+  template:
+    metadata:
+      labels:
+        app: nginx-application-argocd
+    spec:
+      containers:
+      - name: nginx-application-argocd
+        image: nginx
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
