@@ -11,5 +11,5 @@ spec:
   externalIPs:
     - "192.168.134.253"
   ports:
-  - port: 8123
+  - port: 8321
     targetPort: 80
